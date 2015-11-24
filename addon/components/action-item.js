@@ -38,7 +38,6 @@ export default Ember.Component.extend({
   		},
   		closeDialog : function(){
   			console.log(this.get("parentView.target"),"close dialog ",this.get("parentView.name"), this.get("target"));
-  			// $(".modal-dialog").modal("hide");
 
   			this.get("parentView.target").set(this.get("parentView.name"),false);
   		}
