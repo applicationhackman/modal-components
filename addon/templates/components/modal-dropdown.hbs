@@ -1,0 +1,28 @@
+	
+  <ul class={{classname}}  aria-labelledby="dropdownMenu1">
+
+
+  	{{#each modal as |row|}} 
+
+
+  		<li {{action "triggerAction"  row}} class={{row.disabled}}>
+			
+  			<a href="#"> 
+	  			{{#if row.icon.length}}
+		            	<i class={{row.icon}}></i>
+		        {{/if}}	
+	  			{{row.label}} 
+  			</a>
+  		</li>
+
+  		{{#if row.divider}}
+  			 <li role="separator" class="divider"></li>
+  		{{/if}}
+
+	{{/each}}
+    
+  </ul>
+
+
+
+{{yield}}

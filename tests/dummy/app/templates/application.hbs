@@ -1,3 +1,123 @@
-<h2 id="title">Welcome to Ember</h2>
+
+{{#modal-dropdown  role="presentation" modal=createElementAction classname="dropdown-menu" target="controller:application"}}
+
+	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    		File
+    <span class="caret"></span>
+  </button>
+
+{{/modal-dropdown}}	
+
+
+
+{{#modal-dialog name="newtabdialog"}}
+	
+	{{#if newtabdialog}}
+
+	    <div class="modal-content">
+
+	      	<div class="modal-header">
+
+		   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+		        <h4 class="modal-title">
+
+		        	 New tab
+		        </h4>
+
+	      </div>
+
+	      <div class="modal-body">
+
+	        	March
+
+	      </div>
+
+	      <div class="modal-footer">
+
+	        
+	      </div>
+
+	    </div>
+
+	{{/if}}
+
+{{/modal-dialog}}
+
+
+
+{{#modal-dialog name="newwindowdialog"}}
+	
+	{{#if newwindowdialog}}
+
+	    <div class="modal-content">
+
+	      	<div class="modal-header">
+
+		   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		  	 <span aria-hidden="true">&times;</span>
+		   </button>
+
+		        <h4 class="modal-title">
+
+		        	New window
+		        	 
+		        </h4>
+
+	      </div>
+
+	      <div class="modal-body">
+
+	        	June
+
+	      </div>
+
+
+	      {{#modal-dialog-footer type="confirm"}}
+
+	      		{{#action-item tagName="button" class="btn btn-default dropdown-toggle"  dialogClose=true }}
+					Cancel
+				{{/action-item}}
+
+	      		{{#action-item tagName="button" class="btn btn-default dropdown-toggle"}}
+					Ok
+				{{/action-item}}
+
+	        
+	       {{/modal-dialog-footer}}
+
+	    </div>
+
+	{{/if}}
+
+{{/modal-dialog}}
+
+
+
+{{#action-item tagName="button" class="btn btn-default dropdown-toggle" dialog="newtabdialog" }}
+	Click 
+{{/action-item}}
+
+
+<ul class="nav nav-tabs">
+  	
+  
+	{{#modal-dropdown  tagName="li" role="presentation" modal=createElementAction classname="dropdown-menu" target="controller:application"}}
+
+		<a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    		File
+	    <span class="caret"></span>
+	  </a>
+
+	{{/modal-dropdown}}	
+
+	<li role="presentation">	
+  	<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Edit
+    </a>
+  </li>
+  
+</ul>
+
 
 {{outlet}}
