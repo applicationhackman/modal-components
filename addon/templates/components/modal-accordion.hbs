@@ -1,0 +1,19 @@
+	{{#each modal as |item|}}
+
+			<div class="panel panel-default">
+
+
+			 {{#accordion-header role="tab" modal=item}}			    
+			  {{/accordion-header}}  
+
+
+			  {{#accordion-content role="tabpanel" modal=item}}			     
+			  {{/accordion-content}}
+
+
+			</div>
+
+	{{/each}}
+
+
+{{yield}}

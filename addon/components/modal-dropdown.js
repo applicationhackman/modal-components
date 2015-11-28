@@ -12,12 +12,14 @@ export default Ember.Component.extend({
   	this._super();
   },
   actions : {
-  	triggerAction : function(obj){
+  	triggerAction : function(obj)
+    {
 
   		var target = (this.get("target") == null) ? this.get("parentView.controller")  :  this.container.lookup(this.get("target"));
+      
 
-		if(obj.hasOwnProperty("action"))
-		{  		
+  		if(obj.hasOwnProperty("action"))
+  		{  		
   			target.send(obj.action,obj,this);
   		}
 
@@ -28,6 +30,7 @@ export default Ember.Component.extend({
 
   	},
   	setDialog : function(obj,target){
+
   			target.set(obj.dialog,true);
   	}
   }

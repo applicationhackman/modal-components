@@ -1,0 +1,27 @@
+
+<ul class="nav nav-tabs" role="tablist">
+    
+    {{#each modal as |item|}}
+        
+        {{#tab-item modal=item}}
+
+        {{/tab-item}}
+
+    {{/each}}
+
+</ul>
+
+
+<div class="tab-content">
+
+    {{#each modal as |item|}}
+        
+      {{#tab-content modal=item}}
+
+      {{/tab-content}}
+
+    {{/each}}
+
+    
+
+</div>

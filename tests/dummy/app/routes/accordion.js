@@ -1,12 +1,12 @@
 import Em from 'ember';
 
 
-export default Ember.Route.extend({
+export default Em.Route.extend({
 
 		model : function  () {
 			
 		},
-		setupController : function(controller,model){
+		setupController : function(controller){
 
 			// console.log("dialog here ",controller);
 

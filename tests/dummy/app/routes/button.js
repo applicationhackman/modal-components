@@ -45,30 +45,10 @@ export default Ember.Route.extend({
 	    	];
 
 
-
-	    	var ribbon = [
-
-	    		{
-	    			label: "Home",
-	    			template : "ribbon/hometab",
-	    			id:"home",
-	    			mode : "active"
-	    		},
-	    		{
-	    			label: "Edit",
-	    			template : "ribbon/edittab",
-	    			id:"edit",
-	    		}
-
-	    	]
-
-	    	controller.set("createElementAction",createElementAction);
-
-	    	controller.set("newtabdialog",false);
+	    	// controller.set("newtabdialog",false);
 
 	    	controller.set("docFooterActions",docFooterActions);
 
-	    	controller.set("ribbon",ribbon);
 	    	
 
 
