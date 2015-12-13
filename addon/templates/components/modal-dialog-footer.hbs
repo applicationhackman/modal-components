@@ -2,8 +2,6 @@
 
 	{{#each footeractions as |item|}}
 
-		item.dialogClose :: {{item.dialogClose}}
-
 		{{#action-item tagName="button" class="btn btn-default dropdown-toggle"  dialogClose=item.dialogClose action=item.action}}
 			{{item.label}}
 		{{/action-item}}	

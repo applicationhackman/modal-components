@@ -1,3 +1,13 @@
+
+/* CSS declarations go here */
+html,body,.ember-application {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  font-family: 'Crimson Text', serif, Noto SANS-SERIF !important;
+  overflow: hidden;
+}
+
 .example{
 	position: relative;
     padding: 45px 15px 15px;
@@ -21,6 +31,7 @@
 	margin-left: 16%;
     margin-right: 14%;
     width: 50%;
+    overflow: auto;
 }
 
 .modal-dialog {
@@ -48,6 +59,19 @@
 
 
 .sbar{
-    width: 280px;
+    min-width: 280px;
     border-right: 1px solid gray;
+}
+
+.fh{
+  height: 100%;
+}
+
+.fw{
+  width: 100%;
+}
+
+.ember-application div:nth-of-type(1) {
+  height: 100%;
+  /*height: 100vh;*/
 }

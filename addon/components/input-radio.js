@@ -1,9 +1,7 @@
 import Ember from 'ember';
-import layout from '../templates/components/modal-form';
+import layout from '../templates/components/input-radio';
 
 export default Ember.Component.extend({
-   tagName:['form'], 	
+  className : 'radio',	
   layout: layout
-  
-
 });

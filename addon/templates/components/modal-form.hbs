@@ -1,9 +1,20 @@
-Good thing :: {{modal}}
+
 
 {{#each modal as |row|}}
+	
+	 <div class="form-group">
+		 	
+	 	
+	 	{{#if row.label.length}}
+	 			{{#form-label model=row.label}}		 				
+	 			{{/form-label}} 
+		{{/if}} 
 
-	{{row.type}}
+		{{#form-element formtype=type etype=row.type model=row}}
+		{{/form-element}}
 
+
+	 </div>
 
 {{/each}}
 

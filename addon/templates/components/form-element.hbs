@@ -1,0 +1,63 @@
+
+{{#if istext}}
+		
+	value is :: {{model.value}}	
+	
+	{{#input-text type='text' placeholder=model.placeholder value=model.value}}	
+
+	{{/input-text}}
+
+{{/if}}
+
+{{#if isemail}}
+		
+	{{#input-text type='email' placeholder=model.placeholder value=model.value}}	
+
+	{{/input-text}}
+
+{{/if}}
+
+
+{{#if ispassword}}
+		
+	{{#input-text type='password' placeholder=model.placeholder value=model.value}}	
+
+	{{/input-text}}
+
+{{/if}}
+
+
+{{#if ischeckbox}}
+		
+	{{#input-checkbox model=model value=model.value}}
+  	{{/input-checkbox}}
+
+{{/if}}
+
+
+
+{{#if isradio}}
+
+  		{{#input-radio model=model value=model.value}}
+  		{{/input-radio}}
+
+{{/if}}
+
+
+{{#if istextarea}}
+	
+	{{#input-textarea model=model}}
+	{{/input-textarea}}
+
+{{/if}}
+
+{{#if isselect}}
+	
+	{{#input-select model=model}}
+	{{/input-select}}
+
+{{/if}}
+
+
+
+{{yield}}

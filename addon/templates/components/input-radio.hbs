@@ -1,0 +1,8 @@
+{{#each model.model as |data|}}
+	<label>
+		<input type="radio" name={{model.name}} value={{model.value}}>
+		{{data.label}}
+	</label>
+{{/each}}
+
+{{yield}}

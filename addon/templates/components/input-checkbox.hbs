@@ -1,0 +1,11 @@
+{{#each model.model as |data|}}
+
+	
+
+	<label>
+		{{#check-box model=data type='checkbox'}}{{/check-box}}
+		{{data.label}}
+	</label>
+{{/each}}
+
+{{yield}}

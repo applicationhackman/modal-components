@@ -1,0 +1,7 @@
+{{#each model.model as |data|}}
+	<option value={{data.value}}>
+		{{data.label}}
+	</option> 
+{{/each}}
+
+{{yield}}
